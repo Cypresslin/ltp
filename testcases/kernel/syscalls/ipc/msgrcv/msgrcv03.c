@@ -93,7 +93,7 @@ static struct tst_test test = {
 	.needs_tmpdir = 1,
 	.needs_root = 1,
 	.needs_kconfigs = (const char *[]) {
-		"CONFIG_CHECKPOINT_RESTORE",
+		"CONFIG_CHECKPOINT_RESTORE=y",
 		NULL
 	},
 	.min_kver = "3.8.0",
