@@ -255,7 +255,7 @@ static void cleanup(void)
 }
 
 static const char *kconfigs[] = {
-	"CONFIG_BSD_PROCESS_ACCT",
+	"CONFIG_BSD_PROCESS_ACCT=y",
 	NULL
 };
 
