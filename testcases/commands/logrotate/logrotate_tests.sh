@@ -90,7 +90,7 @@ test1()
 	ROD logrotate -fv tst_logrotate.conf > tst_logrotate.out 2>&1
 
 	EXPECT_PASS grep -q "reading config file tst_logrotate.conf" tst_logrotate.out
-	EXPECT_PASS grep -q "forced from command line (5 rotations)" tst_logrotate.out
+	EXPECT_PASS grep -E -q "forced from command line (5 rotations)|forced from command line empty log files are rotated, \(5 rotations\)" tst_logrotate.out
 	EXPECT_PASS grep -E -q "compressing new|log with" tst_logrotate.out
 
 	check_log /var/log/tst_logfile.1.gz
